@@ -57,3 +57,14 @@
         transition: transform 300ms ease-in-out;
     }
 }
+// Navbar List Image
+.navbar__list--item--image {
+    width: 25px;
+    height: 25px;
+    border-radius: 50%;
+}
+.navbar__list > li:last-child {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
