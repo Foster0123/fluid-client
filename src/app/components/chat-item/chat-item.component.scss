@@ -1,0 +1,88 @@
+.chat__container--temporary {
+    width: 300px;
+    padding: 10px;
+}
+
+.chat__item {
+    width: 100%;
+    display: grid;
+    background: linear-gradient(70deg, rebeccapurple, royalblue);
+    grid-template-columns: 60px 1fr;
+    padding: 15px 10px;
+    border-radius: 15px;
+    gap: 10px;
+    padding-top: 20px;
+    position: relative;
+    &::before {
+        opacity: 0;
+        content: '';
+        width: 100%;
+        height: 100%;
+        position: absolute;
+        background-color: rgba(0, 0, 0, 0.1);
+        border-radius: inherit;
+        transition: opacity, 200ms ease-in-out;
+    }
+    &:hover::before {
+        opacity: 1;
+        transition: opacity, 200ms ease-in-out;
+    }
+}
+.chat__item--badge {
+    position: absolute;
+    top: 5px;
+    right: 5px;
+    font-size: small;
+    background-color: rgba(169, 169, 169, 0.5);
+    padding: 2.5px 6px;
+    font-weight: lighter;
+    color: whitesmoke;
+    border-radius: 10px;
+}
+.chat__item--profile {
+    position: relative;
+}
+.chat__item--profile > img {
+    --profile-image-size: 60px;
+    width: var(--profile-image-size);
+    height: var(--profile-image-size);
+    border-radius: 50%;
+}
+
+.chat__item--status {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: yellowgreen;
+    position: absolute;
+    bottom: 5px;
+    right: 5px;
+    box-shadow: 0 0 10px yellowgreen;
+    border-radius: 50%;
+}
+
+// Chat Description
+.chat__item--description {
+    width: 100%;
+    display: flex;
+    align-items: flex-start;
+    justify-content: flex-start;
+    flex-direction: column;
+    margin-top: 2px;
+    color: whitesmoke;
+}
+.chat__item--description__title {
+    font-family: 'Montserrat Alternates Bold';
+    font-size: normal;
+    margin-bottom: 2px;
+}
+.chat__item--description__msg {
+    font-family: 'Montserrat Alternates Medium';
+    font-size: smaller;
+}
+.chat__item--description__time {
+    font-family: 'Montserrat Alternates Regular';
+    font-size: small;
+    font-weight: bold;
+    margin-top: 2px;
+}
